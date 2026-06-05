@@ -12,6 +12,8 @@
 
 **MENTOR NAME**: NEELA SANTHOSH KUMAR
 
+**AUTHOR**: [@MeetPatel3905](https://github.com/MeetPatel3905)
+
 ---
 
 A full-stack real-time chat application built with **React**, **Node.js**, and **Socket.io** — enabling instant messaging between multiple users through WebSocket connections.
