@@ -2,17 +2,21 @@
 
 **COMPANY**: CODTECH IT SOLUTIONS
 
-**NAME**: HARDIKKUMAR SITANSHUBHAI PATEL
+**NAME**: MEET BHAVIN PATEL
 
-**INTERN ID**: CITS179
+**INTERN ID**: CTIS9971
 
 **DOMAIN**: MERN STACK WEB DEVELOPMENT
 
-**BATCH DURATION**: MAY 09th,2026 to JUNE 6th, 2026
+**BATCH DURATION**: MAY 09th, 2026 to JUNE 6th, 2026
 
-**MENTOR NAME** : NEELA SANTHOSH KUMAR
+**MENTOR NAME**: NEELA SANTHOSH KUMAR
+
+---
 
 A full-stack real-time chat application built with **React**, **Node.js**, and **Socket.io** — enabling instant messaging between multiple users through WebSocket connections.
+
+---
 
 ## 📌 Overview
 
@@ -32,37 +36,62 @@ This project demonstrates how to build a production-ready real-time chat app fro
 
 ## 🛠️ Tech Stack
 
-| Side | Technology |
-|------|-----------|
-| Frontend | React.js |
-| Backend | Node.js, Express.js |
-| Real-time | Socket.io |
-| Deployment | Netlify (client), Node server |
+| Component | Technology |
+|-----------|-----------|
+| **Frontend** | React.js, React Router, Socket.io Client |
+| **Backend** | Node.js, Express.js, Socket.io |
+| **Real-time Communication** | WebSockets (Socket.io) |
+| **Styling** | CSS3 with Responsive Design |
+| **Deployment** | Netlify (Client), Heroku/Render/Railway (Server) |
 
 ---
 
 ## 📁 Project Structure
 
 ```
-realtime-chat-app/
-├── client/                 # React frontend
+Real-Time Chat Application/
+├── backend/
+│   ├── server.js              # Main server file
+│   ├── router.js              # Express routes
+│   ├── users.js               # User management logic
+│   ├── package.json           # Backend dependencies
+│   └── node_modules/
+│
+├── frontend/
 │   ├── public/
+│   │   └── index.html         # HTML entry point
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── Chat/
+│   │   │   │   ├── Chat.js
+│   │   │   │   └── Chat.css
+│   │   │   ├── Join/
+│   │   │   │   ├── Join.js
+│   │   │   │   └── Join.css
 │   │   │   ├── InfoBar/
+│   │   │   │   ├── InfoBar.js
+│   │   │   │   └── InfoBar.css
 │   │   │   ├── Input/
-│   │   │   └── Messages/
-│   │   ├── App.js
-│   │   └── index.js
-│   └── package.json
+│   │   │   │   ├── Input.js
+│   │   │   │   └── Input.css
+│   │   │   ├── Messages/
+│   │   │   │   ├── Messages.js
+│   │   │   │   ├── Messages.css
+│   │   │   │   └── Message/
+│   │   │   │       ├── Message.js
+│   │   │   │       └── Message.css
+│   │   │   └── TextContainer/
+│   │   │       ├── TextContainer.js
+│   │   │       └── TextContainer.css
+│   │   ├── App.js             # Main App component
+│   │   ├── index.js           # React entry point
+│   │   └── icons/             # App icons
+│   ├── package.json           # Frontend dependencies
+│   └── node_modules/
 │
-├── server/                 # Node.js backend
-│   ├── index.js
-│   ├── router.js
-│   └── package.json
-│
-└── README.md
+├── .gitignore
+├── README.md
+└── package.json (root, optional)
 ```
 
 ---
@@ -71,35 +100,33 @@ realtime-chat-app/
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) v14 or higher
-- npm
+- **Node.js** v14 or higher
+- **npm** (comes with Node.js)
+- **Git** for version control
 
-### Installation
+### Installation & Setup
 
-1. **Clone the repository**
-
+#### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/realtime-chat-app.git
-cd realtime-chat-app
+git clone https://github.com/MeetPatel3905/Real-Time-Chat-App.git
+cd Real-Time-Chat-App
 ```
 
-2. **Install & start the server**
-
+#### 2. Backend Setup
 ```bash
-cd server
-npm i && npm start
+cd backend
+npm install
+npm start
 ```
+Server runs on: **http://localhost:5000**
 
-3. **Install & start the client** (in a new terminal)
-
+#### 3. Frontend Setup (in a new terminal)
 ```bash
-cd client
-npm i && npm start
+cd frontend
+npm install
+npm start
 ```
-
-The app will be running at:
-- **Frontend:** `http://localhost:3000`
-- **Backend:** `http://localhost:5000`
+Application runs on: **http://localhost:3000**
 
 ---
 
@@ -107,50 +134,111 @@ The app will be running at:
 
 | Event | Direction | Description |
 |-------|-----------|-------------|
-| `join` | Client → Server | User joins a room with name |
+| `join` | Client → Server | User joins a chat room |
 | `sendMessage` | Client → Server | User sends a message |
-| `message` | Server → Client | Deliver message to room |
-| `roomData` | Server → Client | Send updated list of room users |
-| `disconnect` | Server | Handle user leaving |
+| `message` | Server → Client | Message delivered to room |
+| `roomData` | Server → Client | Updated list of active users |
+| `disconnect` | Server | Handles user leaving |
 
 ---
 
-## 🖼️ Usage
+## 🖼️ Usage Guide
 
-1. Open the app in your browser
-2. Enter your **name** and a **room name** to join
-3. Start chatting in real time — open multiple tabs to simulate multiple users
+1. **Open the application** in your browser at `http://localhost:3000`
+2. **Enter your name** and choose a **room name**
+3. **Click "Sign In"** to join the chat room
+4. **Start chatting** in real-time with other users in the same room
+5. **Open multiple tabs** to simulate multiple users and test functionality
+6. **View active users** in the sidebar to see who's online
 
 ---
 
 ## 🚢 Deployment
 
-### Client — Netlify
-
+### Deploy Frontend (Netlify)
 ```bash
-cd client
+cd frontend
 npm run build
 # Deploy the /build folder to Netlify
 ```
 
-### Server — Heroku / Render / Railway
-
+### Deploy Backend (Heroku/Render/Railway)
 ```bash
-# Push server/ to your preferred Node.js hosting platform
-# Set the PORT environment variable if required
+# Push server/ to your preferred hosting platform
+# Set PORT environment variable if required
 ```
+
+---
+
+## 🔧 Configuration
+
+### Backend Server Port
+Edit `backend/server.js`:
+```javascript
+server.listen(process.env.PORT || 5000, () => console.log(`Server has started.`));
+```
+
+### Frontend API Endpoint
+Edit `frontend/src/components/Chat/Chat.js`:
+```javascript
+const ENDPOINT = 'http://localhost:5000'; // Change for production
+```
+
+---
+
+## 📝 Key Features Explained
+
+### Real-time Communication
+- Uses Socket.io for bi-directional WebSocket communication
+- Instant message delivery without page refresh
+- Live user list updates
+
+### Room Management
+- Users can create and join multiple chat rooms
+- Each room is isolated with its own message history
+- Users automatically leave room on disconnect
+
+### User Management
+- Prevents duplicate usernames in the same room
+- Tracks active users and their connection status
+- Notifies users when someone joins or leaves
 
 ---
 
 ## 🤝 Contributing
 
-1. Fork the repo
-2. Create your branch: `git checkout -b feature/your-feature`
-3. Commit changes: `git commit -m "Add your feature"`
-4. Push: `git push origin feature/your-feature`
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m "Add your feature"`
+4. Push to your branch: `git push origin feature/your-feature`
 5. Open a Pull Request
 
-⭐ If this project helped you learn, consider giving it a star!
+---
+
+## 📄 License
+
+This project is licensed under the ISC License - see the LICENSE file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Socket.io** for real-time communication
+- **React** for the UI framework
+- **Express.js** for the backend framework
+- **CODTECH IT SOLUTIONS** for the internship opportunity
+
+---
+
+## 📧 Contact
+
+**Developer**: Meet Bhavin Patel  
+**Email**: p.meet9305@gmail.com  
+**GitHub**: https://github.com/MeetPatel3905
+
+---
+
+⭐ If you found this project helpful, please consider giving it a star!
 - 🟢 Online users list
 - 💬 User join/leave notifications
 - 📱 Responsive design
