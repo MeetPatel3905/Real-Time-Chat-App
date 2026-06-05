@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
+    <main class="chat-container">
+      <!-- Users List -->
+      <aside class="users-list">
+        <h3>Online Users</h3>
+        <ul id="users-list"></ul>
+      </aside>
+
+      <!-- Chat Area -->
+      <section class="chat-area">
+        <!-- Messages Display -->
+        <div id="messages" class="messages"></div>
+
+        <!-- Message Input -->
+        <div class="message-input-container">
+          <input 
+            type="text" 
+            id="message-input" 
+            placeholder="Type your message..." 
+            autocomplete="off"
+          >
+          <button id="send-btn">Send</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  <script src="components/chat.js"></script>
+</body>
+</html>
