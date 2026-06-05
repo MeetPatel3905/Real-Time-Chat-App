@@ -234,15 +234,9 @@ This project is licensed under the ISC License - see the LICENSE file for detail
 
 ## � Author
 
-<div align="center">
-
-![MeetPatel3905](https://avatars.githubusercontent.com/u/YOUR_USER_ID?v=4&s=100)
-
-**[@MeetPatel3905](https://github.com/MeetPatel3905)**
-
-*MERN Stack Developer | Intern at CODTECH IT SOLUTIONS*
-
-</div>
+| ![MeetPatel3905](https://avatars.githubusercontent.com/u/YOUR_USER_ID?v=4&s=50) | **MeetPatel3905** |
+|---|---|
+| | Full Stack Developer |
 
 ---
 
